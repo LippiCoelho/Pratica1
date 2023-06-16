@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-heading: 'Mulish', sans-serif;
+    --ff-texting: 'Open Sans', sans-serif;
+
+    font-size: 62.5%;
+    
+    --fs-heading: 4rem;
+    --fs-body: 1.6rem;
+
+    --bg-primary: #ffffff;
+
+}
+
+body {
+    font-family: var(--ff-texting);
+    font-size: var(--fs-body);
+
+    background-color: rgb(163, 112, 79);
+
+    padding: 3rem;
+    color: #FFFFFF;
+}
+
+.page {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 33rem;
+}
+
+p {
+    line-height: 3.2rem;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+p span {
+    display: none;
+}
+
+h1 {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading);
+    line-height: 4.8rem;
+
+    margin-bottom: 6rem;
+}
+
+.card {
+    position: relative;
+
+    margin-bottom: 2rem;
+}
+
+.card img {
+    border-radius: 1rem;
+    width: 100%;
+
+    height: 40rem;
+    object-fit: cover;
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+    
+    text-align: right;
+    
+    border-radius: 2rem;
+    height: 3.5rem;
+    padding: 2rem;
+    
+    display: inline-flex;
+    align-items: center;
+    background-color: black;
+
+    text-transform: uppercase;
+
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+.card h3:hover {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+header {
+    animation-name: topdown;
+    animation-duration: 1s;
+}
+
+.container {
+    animation: downtop 700ms 100ms reverse backwards;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    100% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+    @media (min-width:700px) {
+        body {
+            background-color: rgb(83, 21, 121);
+        }
+
+        .page {
+            max-width: 117rem;
+            display: flex;
+            gap: 10rem;
+        }
+
+        p span {
+            display: contents;
+        }
+
+        .container {
+            display: grid;
+            gap: 10px;
+            grid-template-areas: 
+            "A B B"
+            "C C D";
+        }
+
+        .container div:nth-child(1) {
+            grid-area: A;
+        }
+
+        .container div:nth-child(2) {
+            grid-area: B;
+        }
+
+        .container div:nth-child(3) {
+            grid-area: C;
+        }
+
+        .container div:nth-child(4) {
+            grid-area: D;
+        }
+}

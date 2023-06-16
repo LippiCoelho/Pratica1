@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-heading: 'Mulish', sans-serif;
+    --ff-texting: 'Open Sans', sans-serif;
+
+    font-size: 62.5%;
+    
+    --fs-heading: 4rem;
+    --fs-texting: 1.6rem;
+
+    --bg-primary: #ffffff;
+
+}
+
+body {
+    font-family: var(--ff-texting);
+    font-size: var(--fs-texting);
+
+    padding: 3rem;
+    
+    background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(227, 255, 248, 0.38) 100%);
+}
+
+.page {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    align-items: center;
+    margin-bottom: 5.8rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+
+}
+
+ul li a {
+    font-weight: 400;
+
+    color: #1F1534;
+    opacity: 0.5;
+
+}
+
+ul li a:hover {
+    font-weight: bold;
+}
+
+h1 {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading);
+    font-weight: 400;
+    font-size: 4.9rem;
+    line-height: 5.6rem;
+
+    min-width: 40rem;
+
+    color: #000000;
+}
+
+h1 span {
+    color: #89C5CC;
+    font-weight: 700;
+}
+
+main p {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    
+    color: #7D7987;
+
+    margin-top: 4rem;
+}
+
+p {
+    min-width: 38rem;
+}
+
+main p span {
+    font-weight: 700;
+}
+
+button {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.4rem 3.2rem;
+
+    background: #69B99D;
+    border-radius: 4px;
+    border: none;
+
+    font-family: 'DM Sans';
+    font-size: 1.6rem;
+
+    color: #F9F9F9;
+}
+
+button:hover {
+    background: #447b68;
+}
+
+main > img {
+    margin: 4rem 0 8rem 0;
+    max-width: 100%;
+}
+
+footer {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    
+    text-align: center;
+    
+    color: #000000;
+}
+
+footer img {
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+a {
+    text-decoration: none;
+
+    color: #000000;
+    font-weight: 700;
+}
+
+@media(min-width: 40em){
+    body {
+        max-width: 1100px;
+        margin: 0 auto;
+        min-height: 100vh;
+    }
+
+    main {
+        display: flex;
+        gap: 10rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
